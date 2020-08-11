@@ -15,3 +15,30 @@ In this project we will learn how to create a very simple Web API using `Node.js
 - [ ] type `npm i` to download dependencies.
 
 Please follow along as the instructor builds the API step by step.
+
+Additional Instructions: 
+
+## Today
+- REST (Representation State Trasnfer)
+- Sub-Routes/ Sub-Resources 
+- Express Routers 
+- Query String Parameters 
+
+## REST 
+
+Guidelines, not a standard. 
+
+### Levels
+
+- 0 - No REST.
+- 1 - Resources.
+- 2 - HTTP Methods/ Verbs.
+- 3 - Hypermedia (links).
+
+| Action                | Endpoint | REST Style URI |
+| :-------------------- | :------- | :------------- |
+| See List of Hubs      |          |                |
+| See Details for a Hub |          |                |
+| Add a                 |          |                |
+| Update a Hub          |          |                |
+| Remove a Hub          |          |                |
