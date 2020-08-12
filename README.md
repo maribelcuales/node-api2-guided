@@ -19,7 +19,7 @@ Please follow along as the instructor builds the API step by step.
 Additional Instructions: 
 
 ## Today
-- REST (Representation State Trasnfer)
+- REST (Representation State Transfer)
 - Sub-Routes/ Sub-Resources 
 - Express Routers 
 - Query String Parameters 
@@ -35,10 +35,14 @@ Guidelines, not a standard.
 - 2 - HTTP Methods/ Verbs.
 - 3 - Hypermedia (links).
 
-| Action                | Endpoint | REST Style URI |
-| :-------------------- | :------- | :------------- |
-| See List of Hubs      |          |                |
-| See Details for a Hub |          |                |
-| Add a                 |          |                |
-| Update a Hub          |          |                |
-| Remove a Hub          |          |                |
+| Action                  | Endpoint      | REST Style URI            |
+| :---------------------- | :------------ | :------------------------ |
+| See List of Hubs        | /hubslist     | GET /hubs                 |
+| See Details for a Hub   | /hubdetails   | GET /hubs/:id             |
+| Add a Hub               | /newhub       | POST /hubs                |
+| Update a Hub            | /modifyhub    | PUT/PATCH /hubs/:id       |
+| Remove a Hub            | /erasehub     | DELETE /hubs/:id          |
+| See List of Tracks      |               | GET /tracks               |
+| See Units for a Track   |               | GET /tracks/:id/units     |
+| See Sprints for a Unit  |               | GET /units/:id/sprints    |
+| See Modules for a Sprint|               | GET /sprints/:id/modules  |
