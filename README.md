@@ -35,14 +35,38 @@ Guidelines, not a standard.
 - 2 - HTTP Methods/ Verbs.
 - 3 - Hypermedia (links).
 
-| Action                  | Endpoint      | REST Style URI            |
-| :---------------------- | :------------ | :------------------------ |
-| See List of Hubs        | /hubslist     | GET /hubs                 |
-| See Details for a Hub   | /hubdetails   | GET /hubs/:id             |
-| Add a Hub               | /newhub       | POST /hubs                |
-| Update a Hub            | /modifyhub    | PUT/PATCH /hubs/:id       |
-| Remove a Hub            | /erasehub     | DELETE /hubs/:id          |
-| See List of Tracks      |               | GET /tracks               |
-| See Units for a Track   |               | GET /tracks/:id/units     |
-| See Sprints for a Unit  |               | GET /units/:id/sprints    |
-| See Modules for a Sprint|               | GET /sprints/:id/modules  |
+| Action                  | Endpoint      | REST Style URI            |                                |
+| :---------------------- | :------------ | :------------------------ |:------------------------------ | 
+| See List of Hubs        | /hubslist     | GET /hubs                 |                                |
+| See Details for a Hub   | /hubdetails   | GET /hubs/:id             |                                |
+| Add a Hub               | /newhub       | POST /hubs                |                                |
+| Update a Hub            | /modifyhub    | PUT/PATCH /hubs/:id       |                                |
+| Remove a Hub            | /erasehub     | DELETE /hubs/:id          |                                |
+| See List of Tracks      |               | GET /tracks               |                                |
+| See List of Units       |               | GET /units                |                                |  
+| See Units for a Track   | /trackunits   | GET /tracks/:id/units     | --> sub routes                 |
+| See Units for a Track   | /trackunits   | GET /units?track=1        | --> query string for filtering | 
+| See Sprints for a Unit  |               | GET /units/:id/sprints    |                                |
+| See Modules for a Sprint|               | GET /sprints/:id/modules  |                                |
+
+Does the Resource makes sense by itself.
+
+Emojis as a reaction to a Slack message.
+
+`/tracks/:id/units/:id`  -->  `/units/:id`
+
+## Query String Parameters 
+
+https://www.google.com
+/search
+`?` --> marks the beginning of the Query String
+`source=hp`  --> key/value pair
+`&`  --> separates the key/value pairs 
+`ei=hk2WW_n6BIOpoATMgL_4Cg&btnG=Search&q=query+string+parameters`
+
+Express turns this into: 
+
+re.query = {
+  source: 'hp',
+  ei: 'hk2WW_n6BIOpoATMgL_4Cg&btnG=Search&q=query+string+parameters'
+}
