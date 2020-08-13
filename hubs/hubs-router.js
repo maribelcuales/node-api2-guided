@@ -112,5 +112,7 @@ router.get('/:id/messages', (req, res) => {
 
 
 // add an endpoint for adding new message to a hub
+// POST /api/messages --> hub_id is part of the request.body
+// POST /api/hubs/:id/messages  -->  have the hub_id on the URL 
 
 module.exports = router; 
